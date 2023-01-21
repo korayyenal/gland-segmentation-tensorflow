@@ -2,10 +2,13 @@
 
 The dataset can be accessed by this link: https://drive.google.com/drive/folders/1iCgoJ8A3kNdYVuuC1_0HZj1YFuUS4ExB?usp=share_link
 
-In this project, I analyze images of colorectal cancer. The main task is gland segmentation. For this purpose, I build two custom networks: a main network and a long-skip network. I preprocess images before the network and post-process them for obtaining better results. The advantages and limitations of the used methods are discussed. Two methods are briefly compared and contrasted. I also evaluate the results and suggest ways to improve.
+## Problem Description
 
-## Problem Motivation:
-The challenge is to segment glands. The main motivation is the accurate segmentation of glands. The gland segmentation task is challenging because gland morphology is usually irregular and heterogeneous. Glands have different shapes, sizes, and morphological features. Thus, accurate segmentation is critical to retrieve reliable morphological features afterward. morphological features are then used by pathologists to measure to determine the malignancy level of glands.
+In this project, I analyze images of colorectal cancer. The main task is gland segmentation in colon histology images. 
+
+The challenge is to segment glands. The main motivation is the accurate segmentation of glands. The gland segmentation task is challenging because gland morphology is usually irregular and heterogeneous. Glands have different shapes, sizes, and morphological features. Thus, accurate segmentation is critical to retrieve reliable morphological features afterward. Morphological features are then used by pathologists to measure to determine the malignancy level of glands.
+
+For this purpose, I build two custom networks: a main network and a long-skip network. I preprocess images before the network and post-process them to obtain better results. I discuss the advantages and limitations of the used methods. I briefly compare and contrast the two methods. I also evaluate the results and suggest ways to improve.
 
 ## Data Description
 
@@ -57,17 +60,17 @@ validation and training performances. I then get the prediction by using the tra
 
 ## Results
 
-Overall, I obtained around 75% accuracy in predicting glands. I observe that in
-general, the models perform well on the training set but performance drops on the test and validation sets.
-This observation is trivial. Second, I observe that the test set performance is as good as the validation set
-for both models. Third, the long-skip model seems to perform better than the main model. In this
-segmentation problem, I obtained relatively low MCC results for both the main model and the long-skip
-model for training and validation. I obtained around 60-65% recall, which is fairly
-good. However, the precision was lower than expected. For this reason, I did not obtain the test results for
+I obtain the following results:
+
+- Overall, I obtained around 75% accuracy in predicting glands. 
+- Test set performance is as good as the validation set for both models. 
+- The long-skip model seems to perform better than the main model. 
+- I obtained relatively low MCC results for both the main model and the long-skip model for training and validation. I obtained around 60-65% recall, which is fairly good. However, the precision was lower than expected. For this reason, I did not obtain the test results for
 these metrics, but only interpreted what could be the reasons for such low values. One interpretation of
 such low segmentation results is that the network architecture had difficulty separating adjacent glands.
-These adjacent glands are usually much harder for algorithms to detect and learn. For mitigating this, as
-the next step, I could work more on the post-processing. Another solution could be to add a third class,
+These adjacent glands are usually much harder for algorithms to detect and learn. 
+
+As the next step, I could work more on the post-processing. Another solution could be to add a third class,
 which would be the borders between the glands. This way, the algorithm could learn to learn borders
 much better by penalizing the network during learning. In addition, low accuracy might be caused by
 irregularly shaped glands. Another interpretation could be that the pre-processing methods were
