@@ -60,15 +60,30 @@ validation and training performances. I then get the prediction by using the tra
 
 ## Results
 
+<img src="figures/main_train_valid.png" width=70% height=70%>
+
+<img src="figures/main_test.png" width=50% height=50%>
+
+<img src="figures/long_train_valid.png" width=70% height=70%>
+
+<img src="figures/long_test.png" width=50% height=50%>
+
 I obtain the following results:
 
 - Overall, I obtained around 75% accuracy in predicting glands. 
 - Test set performance is as good as the validation set for both models. 
 - The long-skip model seems to perform better than the main model. 
+
+<img src="figures/main_MCC.png" width=50% height=50%>
+
+<img src="figures/long_MCC.png" width=50% height=50%>
+
 - I obtained relatively low MCC results for both the main model and the long-skip model for training and validation. I obtained around 60-65% recall, which is fairly good. However, the precision was lower than expected. For this reason, I did not obtain the test results for
 these metrics, but only interpreted what could be the reasons for such low values. One interpretation of
 such low segmentation results is that the network architecture had difficulty separating adjacent glands.
 These adjacent glands are usually much harder for algorithms to detect and learn. 
+
+## Next Steps
 
 As the next step, I could work more on the post-processing. Another solution could be to add a third class,
 which would be the borders between the glands. This way, the algorithm could learn to learn borders
