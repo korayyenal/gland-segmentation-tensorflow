@@ -60,6 +60,8 @@ validation and training performances. I then get the prediction by using the tra
 
 ## Results
 
+<img src="figures/table.png" width=90% height=90%>
+
 <img src="figures/main_train_valid.png" width=70% height=70%>
 
 <img src="figures/main_test.png" width=50% height=50%>
