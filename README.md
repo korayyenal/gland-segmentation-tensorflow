@@ -4,9 +4,9 @@ The dataset can be accessed by this link: https://drive.google.com/drive/folders
 
 ## Problem Description
 
-In this project, I analyze images of colorectal cancer. The main task is gland segmentation in colon histology images. 
+In this project, the main task is the accurate segmentation of glands in colon histology images of colorectal cancer (also known as gland segmentation task). 
 
-The challenge is to segment glands. The main motivation is the accurate segmentation of glands. The gland segmentation task is challenging because gland morphology is usually irregular and heterogeneous. Glands have different shapes, sizes, and morphological features. Thus, accurate segmentation is critical to retrieve reliable morphological features afterward. Morphological features are then used by pathologists to measure to determine the malignancy level of glands.
+The gland segmentation task is challenging because gland morphology is usually irregular and heterogeneous. Glands can have different shapes, sizes, and morphological features. Thus, accurate segmentation is critical to retrieve reliable morphological features afterward. Morphological features are then used by pathologists to measure to determine the malignancy level of glands.
 
 For this purpose, I build two custom networks: a main network and a long-skip network. I preprocess images before the network and post-process them to obtain better results. I discuss the advantages and limitations of the used methods. I briefly compare and contrast the two methods. I also evaluate the results and suggest ways to improve.
 
