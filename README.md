@@ -2,6 +2,10 @@
 
 The dataset can be accessed by this link: https://drive.google.com/drive/folders/1iCgoJ8A3kNdYVuuC1_0HZj1YFuUS4ExB?usp=share_link
 
+## Summary Flowchart
+
+<img src="figures/Gland_Project_Flowchart.png">
+
 ## Problem Description
 
 In this project, the main task is the accurate segmentation of glands in colon histology images of colorectal cancer (also known as gland segmentation task).
